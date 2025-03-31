@@ -10,14 +10,11 @@ import lombok.Setter;
 @Setter
 public class Users {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")// Jeigu id yra automatiškai generuojamas
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq")
+    @SequenceGenerator(name = "users_seq", sequenceName = "USER_ID_SEQ", allocationSize = 1)
+    private Long id;
 
-    @Column(name = "name")
     private String name;
-    @Column(name = "email")
     private String email;
-    @Column(name = "age")
     private Integer age;
 }

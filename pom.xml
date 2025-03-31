@@ -33,19 +33,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-graphql</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-hateoas</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,10 +50,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-jdbc</artifactId>
         </dependency>
 
         <dependency>
@@ -96,7 +84,11 @@
             <artifactId>snowflake-jdbc</artifactId>
             <version>${snowflake.jdbc.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>net.snowflake</groupId>
+            <artifactId>snowflake-hibernate</artifactId>
+            <version>0.0.2-SNAPSHOT</version>
+        </dependency>
 
 
         <!-- HikariCP connection pool (automatiškai naudojama Spring Boot) -->
